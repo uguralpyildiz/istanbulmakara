@@ -459,6 +459,8 @@ a, a:hover {
 
 .suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item img {
   position: relative;
+  height: 500px;
+  object-fit: cover;
 }
 
 .suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item.image-stack-item-top {
