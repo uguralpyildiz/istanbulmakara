@@ -1520,6 +1520,29 @@ span[data-jarallax-element] {
   justify-content: center;
   
 }
+.product-container {
+  padding: 30px;
+}
+
+.product-image {
+  max-width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  height: auto;
+}
+
+.product-title {
+  margin-top: 20px;
+}
+.product-description{
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.product-subtitle {
+  margin-top: 10px;
+  color: #6c757d;
+}
 .post-entry a img {
   height: 300px;
   
