@@ -2,11 +2,11 @@
 body {
   font-family: "Roboto", sans-serif;
  
-  background-color: #000000;
+  background-color: #1b1b1b;
    
 
   font-weight: 300;
-  
+  overflow-x: hidden;
   line-height: 1.7;
   overflow-x: hidden;
   position: relative;
@@ -14,13 +14,20 @@ body {
 
 
 body.offcanvas {
+  position: relative;
   overflow: hidden;
+  
 }
 
 body.offcanvas:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
   visibility: visible;
   opacity: 1;
   z-index: 10000;
+  background: #00000077 !important;
 }
 
 ::-moz-selection {
@@ -664,8 +671,10 @@ nav > *{
   font-size: 3rem;
   font-weight: 700;
   color: #ffffff;
+  background: #000;
   position: relative;
-  padding-bottom: 20px;
+  padding: 10px;
+  border-radius: 50px;
   margin-bottom: 20px;
   font-weight: 700;
   font-family: 'Times New Roman', serif;
@@ -1081,7 +1090,7 @@ nav > *{
 }
 
 .sticky-wrapper .untree_co--site-nav.dark .burger:before, .sticky-wrapper .untree_co--site-nav.dark .burger span, .sticky-wrapper .untree_co--site-nav.dark .burger:after {
-  background: #000;
+  background: #fff;
 }
 
 .sticky-wrapper.is-sticky .untree_co--site-nav {
@@ -1122,7 +1131,7 @@ nav > *{
 }
 
 .sticky-wrapper.is-sticky .burger:before, .sticky-wrapper.is-sticky .burger span, .sticky-wrapper.is-sticky .burger:after {
-  background: #000;
+  background: #ffffff;
 }
 
 /* Mobile nav */
@@ -1131,7 +1140,7 @@ nav > *{
   top: 0 !important;
   z-index: 99998;
   height: 100vh;
-  background: #fff;
+  background: #000;
   width: 280px;
   overflow: auto;
   padding-top: 30px;
@@ -1169,7 +1178,7 @@ nav > *{
 
 .untree_co--site-mobile-menu .close-wrap a .close-label {
   margin-right: 20px;
-  color: #000;
+  color: #fff !important;
 }
 
 .untree_co--site-mobile-menu .close-wrap a .close-times {
@@ -1181,9 +1190,12 @@ nav > *{
 .untree_co--site-mobile-menu .close-wrap a .close-times .bar1, .untree_co--site-mobile-menu .close-wrap a .close-times .bar2 {
   width: 2px;
   height: 20px;
-  background: #000;
+  background: #fff;
+  color: #fff !important;
   position: absolute;
 }
+
+
 
 .untree_co--site-mobile-menu .close-wrap a .close-times .bar1 {
   -webkit-transform: rotate(45deg);
@@ -1210,7 +1222,8 @@ nav > *{
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  color: #000;
+  color: #fff;
+  color: #fff !important;
 }
 
 .untree_co--site-mobile-menu ul a:hover, .untree_co--site-mobile-menu ul li a:hover {
@@ -1222,6 +1235,7 @@ nav > *{
   padding-left: 30px;
   font-size: 14px;
   padding-top: 5px;
+  color: #fff !important;
   padding-bottom: 5px;
 }
 
@@ -1231,6 +1245,7 @@ nav > *{
   font-size: 14px;
   padding-top: 5px;
   padding-bottom: 5px;
+  color: #fff !important;
 }
 
 .untree_co--site-mobile-menu ul > li.has-children .arrow-collapse {
@@ -1242,6 +1257,7 @@ nav > *{
   height: 45px;
   text-align: center;
   cursor: pointer;
+  color: #fff !important;
   border-radius: 50%;
 }
 
@@ -1251,6 +1267,7 @@ nav > *{
   font-family: "icomoon";
   content: "\f078";
   position: absolute;
+  color: #fff !important;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(-180deg);
@@ -1290,8 +1307,13 @@ nav > *{
   position: relative;
   z-index: 1001;
   float: right;
+  color: #fff !important;
 }
+.sticky-wrapper.is-sticky .burger {
 
+  color: #fff !important;
+
+}
 .burger:before, .burger span, .burger:after {
   width: 100%;
   height: 2px;
@@ -1314,14 +1336,17 @@ nav > *{
 
 .burger:before {
   top: 4px;
+  color: #fff !important;
 }
 
 .burger span {
   top: 15px;
+  color: #fff !important;
 }
 
 .burger:after {
   top: 26px;
+  color: #fff !important;
 }
 
 /* Hover */
@@ -1439,7 +1464,7 @@ span[data-jarallax-element] {
   padding: 10px;
   margin-bottom: 50px;
   background: #000000;
-  border: 1px solid #FF896B;
+  border-radius: 11px;
 }
 /* Blog */
 .post-entry .thumb {
@@ -1479,7 +1504,7 @@ span[data-jarallax-element] {
   flex-direction: column;
   text-align: center;
 
-  max-width: 950px;
+  
   margin: auto;
   height: 100%;
   z-index: 1;
@@ -1839,7 +1864,7 @@ footer .form-subscribe .form-control:active, footer .form-subscribe .form-contro
 }
 
 .media-29191 {
-  border: 1px solid #964300 !important;
+  
   box-shadow: 0 0 15px #00000010;
   background: #000 !important;
   padding: 40px;
@@ -2153,7 +2178,7 @@ footer .form-subscribe .form-control:active, footer .form-subscribe .form-contro
   width: 100%;
   height: 500px;
   box-shadow: 0 0 25px #00000025;
-  border: 1px solid #964300;
+  background: #000;
     border-radius: 11px;
 }
 
