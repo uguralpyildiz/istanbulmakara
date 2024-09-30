@@ -136,36 +136,35 @@ $(function() {
 	
 	
 
-	var MobileToggleClick = function() {
-		$('.js-menu-toggle').click(function(e) {
+	var MobileToggleClick = function () {
+		// Menü toggle butonuna tıklama olayı
+		$('.js-menu-toggle').click(function (e) {
+			e.preventDefault(); // Varsayılan davranışı engelle
 
-			// alert();
-			e.preventDefault();
-	  	// var $this = $(this);
+			// 'offcanvas' sınıfını kontrol et ve duruma göre sınıfları değiştir
+			$('body').toggleClass('offcanvas'); // offcanvas sınıfını değiştir
+			$(this).toggleClass('active'); // active sınıfını değiştir
+		});
 
-	  	if ( $('body').hasClass('offcanvas') ) {
-	  		$('body').removeClass('offcanvas');
-	  		$('.js-menu-toggle').removeClass('active');
-	  	} else {
-	  		$('body').addClass('offcanvas');	
-	  		$('.js-menu-toggle').addClass('active');
-	  	}
-
-
-	  });
-
-	  // click outisde offcanvas
-		$(document).mouseup(function(e) {
-	    var container = $(".untree_co--site-mobile-menu");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-	      if ( $('body').hasClass('offcanvas') ) {
+		// Menünün dışına tıklanınca menüyü kapat
+		$(document).mouseup(function (e) {
+			var container = $(".mobile-menu"); // Menüyü içeren alan
+			if (!container.is(e.target) && container.has(e.target).length === 0) {
+				if ($('body').hasClass('offcanvas')) {
 					$('body').removeClass('offcanvas');
-					$('body').find('.js-menu-toggle').removeClass('active');
+					$('.js-menu-toggle').removeClass('active'); // 'active' sınıfını kaldır
 				}
-	    }
-		}); 
+			}
+		});
 	};
-	MobileToggleClick();
+
+	// Sayfa yüklendiğinde MobileToggleClick fonksiyonunu çalıştır
+	$(document).ready(function () {
+		MobileToggleClick();
+	});
+
+
+
 
 	var swiperPlugin = function() {
 		var swiper = new Swiper('.swiper-container', {
